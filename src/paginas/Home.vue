@@ -1,18 +1,26 @@
 <template>
 
-	<div class="pagina">
-		
-		
+	<div>
+		<NavbarDefault/>
+		<div class="pagina">
+			
+			
 
-				
-		
+					
+			
+		</div>
 	</div>
 </template>
 
 <script>
 
+	import NavbarDefault from '@/paginas/blocos/NavbarDefault.vue'
+
 	export default {
-		
+		name: 'Home',
+		components: {
+			NavbarDefault
+		}
 	}
 </script>
 
