@@ -4,7 +4,7 @@
 
 		<div class="pagina">		
 
-			
+			<i class="fa-solid fa-gear"></i>
 		</div>
 	</div>
 </template>
