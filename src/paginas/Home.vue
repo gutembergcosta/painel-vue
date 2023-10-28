@@ -1,12 +1,9 @@
 <template>
-
-	<div>
+	<div id="app">	
 		<NavbarDefault/>
-		<div class="pagina">
-			
-			
 
-					
+		<div class="pagina">		
+
 			
 		</div>
 	</div>
