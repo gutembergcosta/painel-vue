@@ -4,6 +4,8 @@
 
 		<div class="pagina">		
 
+			<Button label="Submit" />
+
 			<i class="fa-solid fa-gear"></i>
 		</div>
 	</div>
@@ -12,6 +14,7 @@
 <script>
 
 	import NavbarDefault from '@/paginas/blocos/NavbarDefault.vue'
+
 
 	export default {
 		name: 'Home',

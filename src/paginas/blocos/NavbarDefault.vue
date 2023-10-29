@@ -1,17 +1,7 @@
 <template>
 
 	<div>
-		<nav class="navbar navbar-expand navbar-dark bg-dark">
-			<router-link to="/" class="navbar-brand">bezKoder</router-link>
-			<div class="navbar-nav mr-auto">
-				<li class="nav-item">
-					<router-link to="/documentacao/sintaxe" class="nav-link">Sintaxe</router-link>
-				</li>
-				<li class="nav-item">
-					<router-link to="/documentacao/max-1st-project" class="nav-link">Max 1st Project</router-link>
-				</li>
-			</div>
-		</nav>
+		<Menubar class="area-menu" :model="items" />
 	</div>
     
 </template>
@@ -21,10 +11,48 @@
 		name: 'NavbarDefault',
 		props: {
 			msg: String
-		},
+		},	
 		data: function () {
 			return {
 				name:'Nome',
+				items: [
+					{
+						label:'Events',
+						icon:'pi pi-fw pi-calendar',
+						items:[
+							{
+								label:'Edit',
+								icon:'pi pi-fw pi-pencil',
+								items:[
+									{
+									label:'Save',
+									icon:'pi pi-fw pi-calendar-plus'
+									},
+									{
+									label:'Delete',
+									icon:'pi pi-fw pi-calendar-minus'
+									},
+
+								]
+							},
+							{
+								label:'Archieve',
+								icon:'pi pi-fw pi-calendar-times',
+								items:[
+									{
+										label:'Remove',
+										icon:'pi pi-fw pi-calendar-minus'
+									}
+								]
+							}
+						]
+					},
+					{
+						label:'Quit',
+						icon:'fa-solid fa-gear',
+						to: '/documentacao/sintaxe'
+					}
+				]
 			}
 		},
 		methods:{
@@ -36,6 +64,20 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" scoped>
+<style lang="scss">
+
+	.area-menu{
+		
+		background: #353535;	
+
+		.p-menuitem-link {
+			background: white;
+		}
+
+		.p-menuitem-link .p-menuitem-text{
+			background: blue;
+		}
+	}
+	
 	
 </style>
